@@ -1,0 +1,23 @@
+[tool.poetry]
+name          = "articles"
+version       = "0.0.1"
+description   = "Flask extension for links lists"
+authors       = ["antlampas"]
+maintainer    = ["antlampas"]
+readme        = "README.md"
+
+[tool.poetry.dependencies]
+python             = "^3.10"
+argon2-cffi        = "^23.0"
+Flask              = "^3.0"
+Flask-Admin        = "^1.6"
+flask-babel        = "^4.0"
+Flask-BabelEx      = "^0.9"
+Flask-Bleach       = "^0.0"
+Flask-Security-Too = "^5.5"
+Flask-SQLAlchemy   = "^3.1"
+Flask-WTF          = "^1.2"
+
+[build-system]
+requires      = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

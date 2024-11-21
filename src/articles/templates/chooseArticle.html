@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action='/articles/edit' method='GET'>
+    <div style="display:grid;grid-template-columns: auto auto auto;justify-content:space-evenly;align-content:center;">
+        <span style="grid-row:1;">{{ form.title.label }}</span><span style="grid-row:2;">{{ form.title() }}</span>
+        <span style="grid-row:7;">{{ form.submit() }}</span>
+    </div>
+</form>
+{% endblock %}

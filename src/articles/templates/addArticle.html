@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block custom_stylesheet %}
+<link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
+{% endblock %}
+
+{% block custom_script %}
+<script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+{% endblock %}
+
+{% block content %}
+<form style="text-align:center" action='/articles/add?title={{ form.title.data }}' onsubmit='document.getElementById("content").value = quill.getText()' method='POST'>
+    {{ form.content()            }}
+    {{ form.title.label          }}
+    {{ form.title()              }}<br><br>
+    <div id="editor"></div><br>
+    {{ form.associate_page.label }}
+    {{ form.associate_page()     }}<br>
+    {{ form.submit()             }}
+</form>
+
+<script src="{{ url_for('.static',filename='scripts/quillEditorAddLoad.js') }}"></script>
+{% endblock %}
