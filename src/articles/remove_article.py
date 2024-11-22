@@ -23,4 +23,4 @@ def remove_article_view():
     populate_form(articleForm,Article,"title")
     return render_template('deleteArticle.html',form=articleForm,sectionname="Rimuovi Articolo",next=request.path)
 
-current_menu.register(remove_article_view,'Rimuovi',logged_only=True)
+current_menu.register(text='Remove',external_url=url_for('remove_article_view'),logged_only=True)
