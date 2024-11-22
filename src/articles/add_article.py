@@ -36,4 +36,4 @@ def add_article_view():
         return redirect(url_for('articles.show_articles_view'))
     return render_template('addArticle.html',form=article_form,sectionname="Nuovo articolo",next=request.path)
 
-current_menu.register(text='Add',external_url=url_for('add_article_view'),logged_only=True)
+current_menu.register(text='Add',external_url=articles_blueprint.static_url_path()+"/add",logged_only=True)
