@@ -1,5 +1,4 @@
 from flask          import current_app,request,redirect,render_template,url_for
-from flask_menu     import register_menu
 from flask_security import auth_required
 from flask_login    import current_user
 from wtforms        import Label

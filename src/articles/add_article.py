@@ -1,5 +1,5 @@
 from flask          import current_app,request,redirect,render_template,url_for
-from flask_menu     import register_menu
+from flask_menu     import current_menu
 from flask_security import auth_required
 from flask_login    import current_user
 from datetime       import datetime
@@ -13,7 +13,6 @@ from .forms         import articleForm
 
 @articles_blueprint.route('/add',methods = ['GET','POST'])
 @auth_required()
-@register_menu(articles_blueprint,'.articles.add','Nuovo',logged_only=True)
 def add_article_view():
     article_form = articleForm()
     article_form.submit.label = Label(article_form.submit.id,"Add")
@@ -36,3 +35,5 @@ def add_article_view():
 
         return redirect(url_for('articles.show_articles_view'))
     return render_template('addArticle.html',form=article_form,sectionname="Nuovo articolo",next=request.path)
+
+current_menu.register(articles_blueprint,add_article_view,'.articles.add','Nuovo',logged_only=True)
