@@ -17,7 +17,7 @@ Flask-Bleach       = "^0.0"
 Flask-Security-Too = "^5.5"
 Flask-SQLAlchemy   = "^3.1"
 Flask-WTF          = "^1.2"
-Flask-Menu         = { git = "https://github.com/antlampas/flask-menu.git" }
+Flask-Menu         = "^2.0"
 
 [build-system]
 requires      = ["poetry-core"]
