@@ -1,5 +1,4 @@
 from flask       import current_app,render_template,url_for,request
-from flask_menu  import register_menu
 from flask_login import current_user
 from bleach      import clean
 
