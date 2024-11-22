@@ -8,4 +8,4 @@ from .utilities import get_articles
 def show_articles_view():
     return render_template('articles.html',articles=get_articles(),sectionname="Articoli",next=request.path)
 
-current_menu.register(articles_blueprint,show_articles_view,'.articles','Articoli',order=1)
+current_menu.register(show_articles_view,'Articoli',order=1)
