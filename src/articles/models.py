@@ -1,6 +1,7 @@
-from flask          import current_app
-from sqlalchemy.orm import DeclarativeBase,MappedAsDataclass,Mapped,mapped_column
-from datetime       import datetime
+from flask                    import current_app
+from sqlalchemy.orm           import DeclarativeBase,MappedAsDataclass,Mapped,mapped_column
+from datetime                 import datetime
+from flask_admin.contrib.sqla import ModelView
 
 class Base(DeclarativeBase, MappedAsDataclass):
     pass
