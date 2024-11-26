@@ -9,6 +9,7 @@ readme        = "README.md"
 [tool.poetry.dependencies]
 python             = "^3.10"
 argon2-cffi        = "^23.0"
+WTForms            = "3.1.2"
 Flask              = "^3.0"
 Flask-Admin        = "^1.6"
 flask-babel        = "^4.0"
