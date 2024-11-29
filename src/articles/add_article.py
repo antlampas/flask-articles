@@ -36,4 +36,4 @@ def add_article_view():
         return redirect(url_for('articles.show_articles_view'))
     return render_template('addArticle.html',form=article_form,sectionname="Nuovo articolo",next=request.path)
 
-MenuNode(".articles").register(text='Add',external_url=articles_blueprint.url_prefix+"/add",logged_only=True)
+MenuNode("Articles",".articles").register(text='Add',external_url=articles_blueprint.url_prefix+"/add",logged_only=True)

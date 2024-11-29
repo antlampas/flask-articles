@@ -23,4 +23,4 @@ def remove_article_view():
     populate_form(articleForm,Article,"title")
     return render_template('deleteArticle.html',form=articleForm,sectionname="Rimuovi Articolo",next=request.path)
 
-MenuNode(".articles").register(text='Remove',external_url=articles_blueprint.url_prefix+"/delete",logged_only=True)
+MenuNode("Remove",".articles").register(text='Remove',external_url=articles_blueprint.url_prefix+"/delete",logged_only=True)
