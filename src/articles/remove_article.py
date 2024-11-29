@@ -1,6 +1,6 @@
 from flask          import current_app,request,redirect,render_template,url_for
 from flask_security import auth_required
-from flask_menu     import current_menu
+from flask_menu     import MenuNode
 from flask_login    import current_user
 from wtforms        import Label
 from bleach         import clean
@@ -23,4 +23,4 @@ def remove_article_view():
     populate_form(articleForm,Article,"title")
     return render_template('deleteArticle.html',form=articleForm,sectionname="Rimuovi Articolo",next=request.path)
 
-current_menu.submenu(".articles.remove").register(text='Remove',external_url=articles_blueprint.url_prefix+"/delete",logged_only=True)
+MenuNode(".articles").register(text='Remove',external_url=articles_blueprint.url_prefix+"/delete",logged_only=True)
